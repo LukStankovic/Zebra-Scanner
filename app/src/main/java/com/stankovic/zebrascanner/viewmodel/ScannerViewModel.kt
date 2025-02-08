@@ -14,8 +14,4 @@ class ScannerViewModel @Inject constructor() : ViewModel() {
     fun updateScannedData(data: String) {
         _scannedData.value = data
     }
-
-    fun clearScannedData() {
-        _scannedData.value = null
-    }
 }
