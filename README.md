@@ -8,6 +8,12 @@ This is a simple barcode scanner app that uses the intent to scan barcodes.
   barcode data from the intent extras.
 - Scanned data are saved to the view model and displayed in the UI.
 
+### Files
+- `ScanningConfig.kt` - contains the intent action and extras keys
+- `ScannerViewModel.kt` - contains the view model that holds the scanned data
+- `ScanBroadcastReceiver.kt` - contains the broadcast receiver that listens for the scan intent
+- `AndroidManifest.xml` - contains the broadcast receiver declaration
+
 ## How to enable intent broadcast on Zebra devices
 
 - Install/Open DataWedge app on the device.
