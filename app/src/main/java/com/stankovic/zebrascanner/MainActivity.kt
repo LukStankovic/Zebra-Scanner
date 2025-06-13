@@ -36,6 +36,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
     private fun registerScannerReceiver() {
         if (!isReceiverRegistered) {
             val filter = IntentFilter()
@@ -45,7 +46,6 @@ class MainActivity : ComponentActivity() {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                 registerReceiver(scannerReceiver, filter, RECEIVER_EXPORTED)
             } else {
-                @SuppressLint("UnspecifiedRegisterReceiverFlag")
                 registerReceiver(scannerReceiver, filter)
             }
             isReceiverRegistered = true
