@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <permission
+        android:name="com.stankovic.zebrascanner.SCAN_PERMISSION"
+        android:protectionLevel="signature" />
+
     <application
         android:name=".ZebraScannerApplication"
         android:allowBackup="true"
