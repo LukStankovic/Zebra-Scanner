@@ -1,0 +1,101 @@
+version: 2
+updates:
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "LukStankovic"
+    assignees:
+      - "LukStankovic"
+    commit-message:
+      prefix: "deps"
+      prefix-development: "deps-dev"
+      include: "scope"
+    labels:
+      - "dependencies"
+    groups:
+      build-tools:
+        patterns:
+          - "com.android.tools.build:gradle"
+          - "com.android.application"
+          - "com.google.devtools.ksp"
+        update-types:
+          - "minor"
+          - "patch"
+      
+      kotlin:
+        patterns:
+          - "*kotlin*"
+          - "org.jetbrains.kotlin.*"
+        update-types:
+          - "minor"
+          - "patch"
+      
+      androidx-core:
+        patterns:
+          - "androidx.core:*"
+          - "androidx.lifecycle:*"
+          - "androidx.activity:*"
+        update-types:
+          - "minor"
+          - "patch"
+      
+      compose:
+        patterns:
+          - "androidx.compose:*"
+          - "*compose*"
+        update-types:
+          - "minor"
+          - "patch"
+      
+      hilt:
+        patterns:
+          - "com.google.dagger:hilt-*"
+          - "androidx.hilt:*"
+        update-types:
+          - "minor"
+          - "patch"
+      
+      testing:
+        patterns:
+          - "junit:junit"
+          - "androidx.test.*:*"
+          - "*junit*"
+          - "*espresso*"
+          - "*mockito*"
+          - "*robolectric*"
+        update-types:
+          - "minor"
+          - "patch"
+      
+      material:
+        patterns:
+          - "androidx.compose.material3:*"
+          - "com.google.android.material:*"
+        update-types:
+          - "minor"
+          - "patch"
+
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "LukStankovic"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "github-actions"
