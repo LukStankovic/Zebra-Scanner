@@ -17,7 +17,8 @@ This is a simple barcode scanner app that uses the intent to scan barcodes.
 
 ## How to enable intent broadcast on Zebra devices via DataWedge
 
-**You have to create a profile after installing the app on the Zebra device!**
+> [!IMPORTANT]
+> You have to create a profile **after** installing this app on the Zebra device!
 
 1. Open DataWedge app on the device.
 2. Click on three dots in top right corner
