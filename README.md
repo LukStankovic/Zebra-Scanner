@@ -14,12 +14,12 @@ A simple and modern Android barcode scanner app for **Zebra devices** (like TC21
 
 ## Project Structure
 
-| File | Purpose |
-|------|---------|
-| `ScanningConfig.kt` | Defines the intent action and keys for extras. |
-| `ScannerViewModel.kt` | Holds the scanned barcode data and exposes it to the UI using StateFlow. |
-| `ScanBroadcastReceiver.kt` | Listens for broadcast intents from DataWedge and updates the ViewModel. |
-| `AndroidManifest.xml` | Registers the BroadcastReceiver for the scan action. |
+| File                       | Purpose                                                                  |
+|----------------------------|--------------------------------------------------------------------------|
+| `ScanningConfig.kt`        | Defines the intent action and keys for extras.                           |
+| `ScannerViewModel.kt`      | Holds the scanned barcode data and exposes it to the UI using StateFlow. |
+| `ScanBroadcastReceiver.kt` | Listens for broadcast intents from DataWedge and updates the ViewModel.  |
+| `AndroidManifest.xml`      | Registers the BroadcastReceiver for the scan action.                     |
 
 ## How It Works
 
